@@ -1,4 +1,4 @@
-import { Minus, Plus, RefreshCw } from 'lucide-react';
+import { Minus, Plus } from 'lucide-react';
 import { useMatrixStore } from '../store/matrixStore';
 import { cn } from '../lib/utils';
 import useCofactorAnimator from '../hooks/useCofactorAnimator';

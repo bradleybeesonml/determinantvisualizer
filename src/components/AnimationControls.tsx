@@ -1,18 +1,20 @@
 import { Play, Pause, SkipBack, SkipForward, RefreshCw } from 'lucide-react';
 import { useAnimationStore } from '../store/animationStore';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const AnimationControls = () => {
     const { isPlaying, play, pause, nextStep, prevStep, reset, currentStepIndex, steps } = useAnimationStore();
     
     useEffect(() => {
-        let timer;
+        let timer: ReturnType<typeof setTimeout> | undefined;
         if (isPlaying && currentStepIndex < steps.length - 1) {
             timer = setTimeout(() => {
                 nextStep();
             }, 1500);
         }
-        return () => clearTimeout(timer);
+        return () => {
+            if (timer) clearTimeout(timer);
+        };
     }, [isPlaying, currentStepIndex, steps.length, nextStep]);
 
     return (

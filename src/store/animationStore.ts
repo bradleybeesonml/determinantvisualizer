@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import type { Matrix } from './matrixStore';
 
 export type AnimationStep =
   | {
@@ -46,7 +45,7 @@ interface AnimationState {
   reset: () => void;
 }
 
-export const useAnimationStore = create<AnimationState>((set, get) => ({
+export const useAnimationStore = create<AnimationState>((set) => ({
   steps: [],
   currentStepIndex: -1,
   isPlaying: false,

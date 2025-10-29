@@ -1,7 +1,6 @@
 import { useAnimationStore } from '../store/animationStore';
 import { motion } from 'framer-motion';
 import { cn } from '../lib/utils';
-import React from 'react';
 
 const CalculationSteps = () => {
     const { steps, currentStepIndex } = useAnimationStore();

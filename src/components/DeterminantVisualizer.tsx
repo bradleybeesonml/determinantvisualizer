@@ -2,7 +2,6 @@ import { useAnimationStore } from '../store/animationStore';
 import { useMatrixStore } from '../store/matrixStore';
 import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '../lib/utils';
-import React from 'react';
 
 interface MatrixDisplayProps {
   matrix: number[][];
@@ -41,7 +40,7 @@ const MatrixDisplay = ({ matrix, highlight, crossout }: MatrixDisplayProps) => {
 
 const DeterminantVisualizer = () => {
     const { steps, currentStepIndex } = useAnimationStore();
-    const { matrix, matrixSize } = useMatrixStore();
+    const { matrix } = useMatrixStore();
 
     console.log('DeterminantVisualizer render:', { stepsLength: steps.length, currentStepIndex });
 

@@ -1,5 +1,5 @@
 import { useAnimationStore, type AnimationStep } from '../store/animationStore';
-import { useMatrixStore, type Matrix } from '../store/matrixStore';
+import { useMatrixStore } from '../store/matrixStore';
 
 const getMinor = (matrix: number[][], row: number, col: number): number[][] => {
   return matrix
