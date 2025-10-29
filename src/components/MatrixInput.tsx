@@ -2,7 +2,7 @@ import { Minus, Plus } from 'lucide-react';
 import { useMatrixStore } from '../store/matrixStore';
 import { cn } from '../lib/utils';
 import useCofactorAnimator from '../hooks/useCofactorAnimator';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const PRESETS = {
   '2x2': [
